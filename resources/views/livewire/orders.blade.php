@@ -115,7 +115,7 @@
                     </table>
                 </div>
                 <div class="card-footer text-end">
-                   
+                    
                     <table class="table table-sm">
                         <tr>
                             <th>
@@ -125,7 +125,7 @@
                                     :
                             </th>
                             <th><h2>@money($total)</h2>
-                           
+                            
                             </th>
                         </tr>
                         <tr>
@@ -151,8 +151,8 @@
                             </th>
                         </tr>
                     </table>
-                   
-                    <button class="btn btn-lg btn-success"><i class="fas fa-print"></i>  Cetak</button>
+                    
+                    <button class="btn btn-lg btn-success" wire:click="receipt({{ $data->id }})"><i class="fas fa-print"></i> Cetak</button>
                  
                 </div>
             </div>
