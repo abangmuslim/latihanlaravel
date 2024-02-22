@@ -1,13 +1,16 @@
 <?php
 
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CetakController;
-
 
 
 /*
@@ -21,9 +24,8 @@ use App\Http\Controllers\CetakController;
 |
 */
 
-
 Route::get('/',function(){
-    return view('welcome',[
+    return view('dashboard',[
         "title"=>"Dashboard"
     ]);
 })->middleware('auth');
@@ -47,6 +49,9 @@ Route::get('penjualan',function(){
     ]);
 })->name('penjualan')->middleware('auth');
 
+Route::get('lw',function(){
+    return view('lw');
+});
 
 Route::get('order',function(){
 return view('penjualan.orders',[

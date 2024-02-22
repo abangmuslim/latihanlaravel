@@ -9,7 +9,8 @@ use Illuminate\Http\RedirectResponse;
 class LoginController extends Controller
 {
     //
-    public function authenticate(Request $request): RedirectResponse
+
+    public function authenticate(Request $request):RedirectResponse
     {
         $credentials = $request->validate([
             'email' => ['required'],
@@ -21,7 +22,8 @@ class LoginController extends Controller
             return redirect()->intended('/');
         }
 
-        return back()->with('loginError', 'Login Failed');
+        return back()->with('loginError','Login Failed');
+
     }
 
     public function loginView()
