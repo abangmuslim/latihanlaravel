@@ -97,7 +97,7 @@
                with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                            <a href="/" class="nav-link {{ ($title==='dashboard')?'active':'' }}">
+                            <a href="/" class="nav-link {{ ($title==='welcome')?'active':'' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
